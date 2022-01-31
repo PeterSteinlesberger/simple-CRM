@@ -9,3 +9,22 @@
 .menu-icon {
     cursor: pointer;
 }
+
+.sidenav {
+    width: 300px;
+}
+
+.logo-container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    min-height: 56px;
+    display: flex;
+   align-items: center;
+   padding-left: 16px;
+   padding-right: 16px;
+
+}
+
+.toolbar-container {
+    height: 56px;
+
+}
