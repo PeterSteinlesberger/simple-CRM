@@ -1,6 +1,15 @@
 <h1 mat-dialog-title>Add User</h1>
 <div mat-dialog-content>
- 
+    <div class="name-container">
+    <mat-form-field class="margin-right16" appearance="outline">
+        <mat-label >First name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Second name</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
