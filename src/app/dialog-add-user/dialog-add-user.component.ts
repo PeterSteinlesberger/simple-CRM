@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/models/user.class';
 
 
 @Component({
@@ -8,14 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogAddUserComponent implements OnInit {
 
+  user = new User();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onNoClick() {
-    
+
   }
 
+  saveUser() {
+    console.log('userData:', this.user);
+  }
 
 }
