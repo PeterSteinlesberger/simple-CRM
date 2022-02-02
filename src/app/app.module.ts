@@ -54,8 +54,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
    // this one work but in ringoffire i had to delete it --> provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-    MatProgressBarModule
-    
+    MatProgressBarModule,
+       
   ],
   providers: [
     MatDatepickerModule,
