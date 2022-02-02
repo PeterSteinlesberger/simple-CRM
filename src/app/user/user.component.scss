@@ -1,5 +1,15 @@
-.user-btn {
+.add-user-btn {
     position: absolute;
     right: 56px;
     bottom: 56px;
+}
+
+.user-table {
+    width: 100%;
+    font-size: 14px;
+font-weight: 400;
+    th {
+        color: rgba(0,0,0,.6);
+        text-align: start;
+    }
 }
