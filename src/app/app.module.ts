@@ -24,7 +24,7 @@ import { environment } from '../environments/environment';
 import { ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -54,7 +54,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
    // this one work but in ringoffire i had to delete it --> provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-   
+    MatProgressBarModule
     
   ],
   providers: [
