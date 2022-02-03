@@ -22,9 +22,7 @@ export class UserComponent implements OnInit {
       .subscribe((changes: any) => {
         console.log('Received changes from DB', changes);
         this.allUsers = changes;
-        console.log('allUsers:', this.allUsers);
-        
-
+        console.log('allUsers:', this.allUsers); 
       });
   }
 
