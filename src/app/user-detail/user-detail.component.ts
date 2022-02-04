@@ -8,12 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserDetailComponent implements OnInit {
 
+userId: any = '';
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.paramMap
-    .subscribe( paramMap => {
-      this. = paramMap.get('');
+    this.route.paramMap.subscribe( paramMap => {
+      this.userId = paramMap.get('id');
+      console.log('userId:', this.userId);
     })
   }
 
