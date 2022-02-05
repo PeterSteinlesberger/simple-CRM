@@ -1,15 +1,15 @@
 <mat-card class="user-detail-header">
     <img src="./assets/img/man5.PNG">
     <div class="user-details">
-       <h2>Peter Steinlesberger</h2> 
-        emailadresse
+       <h2> {{ user.firstName }} {{ user.lastName }}</h2> 
+        {{ user.email }}
     </div>
 </mat-card>
 
 <mat-card class="margin-top">
 <mat-card-title>Address</mat-card-title>
     <mat-card-content>
-        Musterstrasse 23 <br>
-        12345 Musterstadt
+        {{ user.street }} <br>
+        {{ user.zipCode}} {{ user.city }}
     </mat-card-content>
 </mat-card>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute } from '@angular/router';
+import { User } from 'src/models/user.class';
 
 @Component({
   selector: 'app-user-detail',
@@ -10,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class UserDetailComponent implements OnInit {
 
 userId: any = '';
-user: any = {};
+user: User = new User();
 
   constructor(private route: ActivatedRoute, private firestore: AngularFirestore) { }
 
@@ -25,10 +26,11 @@ user: any = {};
   getUser() {
     this.firestore
     .collection('users')
+    .doc( this.userId)     //get one element from "users" in DB wit the Id from "userId"
     .valueChanges('userId')
-    .subscribe((user: any) => {
-      this.user = user;
-      console.log('User from DB:', this.user); 
+    .subscribe((userDB: any) => {
+      this.user = new User(userDB);  //get the user-JSON from DB and fill with it the object "User" in the var user
+      console.log('Retrieved user:', this.user); 
     });
   }
 
