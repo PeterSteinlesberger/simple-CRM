@@ -7,6 +7,9 @@
 </mat-card>
 
 <mat-card class="margin-top">
+    <button  mat-icon-button class="icon-btn" (click)="openAddressDialog()">
+        <mat-icon>more_vert</mat-icon>
+      </button>
 <mat-card-title>Address</mat-card-title>
     <mat-card-content>
         {{ user.street }} <br>
