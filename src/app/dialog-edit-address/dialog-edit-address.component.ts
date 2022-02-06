@@ -10,7 +10,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class DialogEditAddressComponent implements OnInit {
 
-  userId!: string;
+  userId!: any;
   user!: User;
   loading = false;
 
@@ -20,11 +20,11 @@ export class DialogEditAddressComponent implements OnInit {
   ngOnInit(): void {
   }
 
-saveUser() {
-this.firestore
-.collection('users')
-.doc(this.userId)
-.update(this.user.toJSON());
-}
+  saveUser() {
+    this.firestore
+      .collection('users')
+      .doc(this.userId)
+      .update(this.user.toJSON());
+  }
 
 }
