@@ -34,5 +34,14 @@ user: User = new User();
     });
   }
 
+editMenu() {
 
 }
+
+editUserDetail() {
+  
+}
+
+} 
+
+
