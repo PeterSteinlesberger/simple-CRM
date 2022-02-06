@@ -10,8 +10,8 @@ import { MatDialogRef } from "@angular/material/dialog";
 export class DialogAddUserComponent implements OnInit {
 
   user = new User();
-  birthDate! : Date;
- loading = false;
+  birthDate!: Date;
+  loading = false;
 
   constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>, private firestore: AngularFirestore) { }
 
@@ -19,18 +19,18 @@ export class DialogAddUserComponent implements OnInit {
   }
 
   saveUser() {
-    this.user.birthDate = this.birthDate.getTime(); 
-     this.loading = true;
+    this.user.birthDate = this.birthDate.getTime();
+    this.loading = true;
     console.log('userData:', this.user);
     this.firestore
-    .collection('users')
-    .add(this.user.toJSON())
-    .then((result: any) => { 
-      setTimeout(() =>  {this.loading = false;}, 850);
-      console.log('This user added:', result);
-      this.dialogRef.close();
-    });
-   
+      .collection('users')
+      .add(this.user.toJSON())
+      .then((result: any) => {
+        setTimeout(() => { this.loading = false; }, 850);
+        console.log('This user added:', result);
+        this.dialogRef.close();
+      });
+
   }
 
 }

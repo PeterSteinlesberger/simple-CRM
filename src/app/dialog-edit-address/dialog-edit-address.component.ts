@@ -21,10 +21,18 @@ export class DialogEditAddressComponent implements OnInit {
   }
 
   saveUser() {
+    this.loading = true;
     this.firestore
       .collection('users')
       .doc(this.userId)
-      .update(this.user.toJSON());
+      .update(this.user.toJSON())
+      .then(() => {
+        setTimeout(() => {
+          this.loading = false;
+          this.dialogRef.close();
+        }, 850);
+
+      });
   }
 
 }
