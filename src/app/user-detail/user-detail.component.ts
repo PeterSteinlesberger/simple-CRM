@@ -39,11 +39,13 @@ user: User = new User();
 editMenu() {
 const dialog = this.dialog.open(DialogEditAddressComponent);
 dialog.componentInstance.user = new User(this.user.toJSON);
+dialog.componentInstance.userId = this.userId;
 }
 
 editUserDetail() {
 const dialog = this.dialog.open(DialogEditUserComponent);
 dialog.componentInstance.user = new User(this.user.toJSON);
+dialog.componentInstance.userId = this.userId;
 }
 
 } 
