@@ -11,7 +11,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class DialogEditAddressComponent implements OnInit {
 
   userId!: any;
-  user!: User;
+  user = new User();
   loading = false;
 
 
