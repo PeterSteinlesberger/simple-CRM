@@ -21,11 +21,14 @@ body {
     margin-top: 32px;
 }
 
-mat-progress-bar {
-    position: absolute;
-top: -24px;
-left: -24px;
-right: -24px;
-width: calc(100% + 48px);
-}
+.dialog-container {
+    position: relative;
 
+    mat-progress-bar {
+        position: absolute;
+    top: -24px;
+    left: -24px;
+    right: -24px;
+    width: calc(100% + 48px);
+    }
+}
