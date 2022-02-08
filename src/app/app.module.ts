@@ -19,11 +19,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
 import { UserDetailComponent } from './user-detail/user-detail.component';
@@ -33,9 +30,6 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
 
 
 @NgModule({
-  exports: [
-    MatDialogModule
-  ],
   declarations: [
     AppComponent,
     DashboardComponent,
@@ -62,16 +56,13 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     FormsModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
-   // this one work but in ringoffire i had to delete it --> provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()),
     MatProgressBarModule,
     MatCardModule,
-    MatMenuModule,
-    MatDialogRef
+    MatDatepickerModule,
+    MatMenuModule
   ],
   providers: [
-    MatDatepickerModule,
+    
     ScreenTrackingService,UserTrackingService
   ],
   bootstrap: [AppComponent]
