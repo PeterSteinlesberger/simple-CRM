@@ -14,7 +14,7 @@ describe('DialogEditAddressComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatDialogRef, AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule, MatDialogModule, MatMenuModule, RouterModule.forRoot([]) ], 
+      imports: [AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule, MatDialogModule, MatMenuModule, RouterModule.forRoot([]) ], 
       declarations: [ DialogEditAddressComponent ]
     })
     .compileComponents();

@@ -48,6 +48,13 @@ export class UserDetailComponent implements OnInit {
     dialog.componentInstance.userId = this.userId;
   }
 
+  deleteUser() {
+    this.firestore
+      .collection('users')
+      .doc(this.userId)     //get one element from "users" in DB wit the Id from "userId"
+      .delete();
+  };
+
 }
 
 
